@@ -1,5 +1,19 @@
 body {
-    background-color: rgb(247, 173, 173);
+    background-color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: lightcoral;
+    color: white;
 }
 
 h2 {
@@ -67,18 +81,27 @@ button:hover {
     /* Change to a color that fits the theme */
 }
 
-footer {
-    background: #343a40;
-    color: #ffffff;
-    text-align: center;
+.more {
+    margin-top: 50px;
+    background-color: lightcoral;
     padding: 20px 0;
 }
 
-footer a {
-    color: #ffffff;
-    text-decoration: none;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 20px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.more--rights {
+    margin: 0;
+}
+
+.more--credits a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
