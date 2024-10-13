@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(247, 173, 173);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: lightcoral;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Adding transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: lightcoral;
+    box-shadow: 0 0 5px rgba(217, 0, 112, 0.5);
+}
+
+input[type="submit"],
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: grey;
+    /* Change to a color that fits the theme */
+}
+
+footer {
+    background: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
