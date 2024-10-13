@@ -14,18 +14,22 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
 h1,
 h2 {
-    margin: 0;
+    margin: 25px;
     padding: 0;
     font-family: 'Arial Black', sans-serif;
 }
 
 h1 a {
     color: #ffffff;
+}
+
+p {
+    margin-left: 25px;
 }
 
 /* Header Styling */
@@ -50,96 +54,15 @@ h1 a {
     margin-top: 50px;
 }
 
-/* Cart Section */
-.cart {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cart h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Cart Items Styling */
-#cart-items {
-    margin-bottom: 20px;
-}
-
 .cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-
-}
-
-.cart-item p {
-    margin: 0;
-    font-size: 18px;
-    color: #555;
-}
-
-.cart-item button {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.cart-item button:hover {
-    background-color: #ff3d2e;
-}
-
-/* Cart Total */
-.cart-total {
-    text-align: right;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    text-align: end;
+    list-style-type: none;
 }
 
-/* Cart Actions */
-.cart-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.clear-cart {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.clear-cart:hover {
-    background-color: #ff3d2e;
-}
-
-.checkout-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.checkout-button:hover {
-    background-color: #45a049;
+.buy-button {
+    background-color: lightcoral;
+    margin-left: 25px;
 }
 
 .more {
