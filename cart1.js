@@ -36,15 +36,9 @@ function loadCart() {
         cartItemsContainer.innerHTML = '';  // Clear previous items  
         let total = 0;  
         cart.forEach((item, index) => {  
-            const itemHTML = `<div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">  
-                <div>
-                    <p>${item.name} - €${item.price} (Quantity: ${item.quantity})</p>  
-                </div>
-                <div class="cart-item-buttons" style="display: flex; gap: 10px;">
-                    <button onclick="decreaseQuantity(${index})">-</button>  
-                    <button onclick="increaseQuantity(${index})">+</button>  
-                    <button onclick="removeFromCart(${index})">Remove</button>  
-                </div>
+            const itemHTML = `<div class="cart-item">  
+                <p>${item.name} - €${item.price} (Quantity: ${item.quantity})</p>  
+                <button onclick="removeFromCart(${index})">Remove 1</button>  
             </div>`;  
             cartItemsContainer.innerHTML += itemHTML;  
             total += parseFloat(item.price) * item.quantity; // Calculate total  
@@ -58,33 +52,16 @@ function loadCart() {
 function removeFromCart(index) {  
     let cart = JSON.parse(localStorage.getItem('cart'));  
     if (cart && cart.length > 0) {
-        cart.splice(index, 1);  // Remove the item
-        localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage  
-        loadCart(); // Refresh the cart display  
-    }
-}  
-
-// Function to decrease the quantity of an item in the cart  
-function decreaseQuantity(index) {  
-    let cart = JSON.parse(localStorage.getItem('cart'));  
-    if (cart && cart.length > 0) {
+        // Check if quantity is greater than 1
         if (cart[index].quantity > 1) {
-            cart[index].quantity -= 1;  // Decrement quantity by 1
+            cart[index].quantity -= 1;  // Decrement the quantity by 1
         } else {
             cart.splice(index, 1);  // Remove the item if quantity is 1
         }
-        localStorage.setItem('cart', JSON.stringify(cart));  // Update localStorage
-        loadCart();  // Refresh the cart display
-    }
-}  
 
-// Function to increase the quantity of an item in the cart  
-function increaseQuantity(index) {  
-    let cart = JSON.parse(localStorage.getItem('cart'));  
-    if (cart && cart.length > 0) {
-        cart[index].quantity += 1;  // Increment quantity by 1
-        localStorage.setItem('cart', JSON.stringify(cart));  // Update localStorage
-        loadCart();  // Refresh the cart display
+        // Update localStorage with the modified cart
+        localStorage.setItem('cart', JSON.stringify(cart));  
+        loadCart(); // Refresh the cart display  
     }
 }  
 
