@@ -140,7 +140,12 @@ a {
     max-height: 300px;
     min-width: 300px;
     min-height: 300px;
+    display: max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
     display: flex;
+    ;
     flex-direction: column;
     align-items: center;
     padding: 10px;
